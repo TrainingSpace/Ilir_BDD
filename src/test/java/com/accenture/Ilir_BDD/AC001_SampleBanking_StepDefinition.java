@@ -1,5 +1,8 @@
 package com.accenture.Ilir_BDD;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -7,10 +10,15 @@ import cucumber.api.java.en.When;
 
 public class AC001_SampleBanking_StepDefinition {
 
-
+	WebDriver driver;
+	
 @Given("^a user access the bank web app$")
 public void a_user_access_the_bank_web_app() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
+
+	driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.navigate().to("http://www.mykidsbank.org");
 
 }
 
