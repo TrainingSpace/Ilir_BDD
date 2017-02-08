@@ -1,0 +1,437 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Sample feature file for Behavior-Driven Testing and Development training"
+      },
+      {
+        "line": 2,
+        "value": "#Author: Fernanda Menks - fernanda.menks@accenture.com"
+      },
+      {
+        "line": 3,
+        "value": "#Creation date: July 31, 2016"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 11,
+            "value": "#Login information for generic user so all scenarios will use the same starting point"
+          }
+        ],
+        "line": 12,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 299187757,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "a user access the bank web app",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2954055,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "logs using the credentials",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "bank_id",
+                  "username",
+                  "password",
+                  "url"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "25967",
+                  "ban5ker",
+                  "training",
+                  "http://www.mykidsbank.org"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Make a deposit",
+        "description": "",
+        "id": "manage-simple-transactions-in-a-banking-account;make-a-deposit",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 49135,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "my checking account has balance equal or greater than zero",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.my_checking_account_has_balance_equal_or_greater_than_zero()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4650570,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I deposit 1500 to my checking account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1500",
+                  "offset": 10
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_deposit_to_my_checking_account(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 248916,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I should have additional 1500 as balance",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1500",
+                  "offset": 25
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_should_have_additional_as_balance(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 18,
+            "name": "@TC_001"
+          },
+          {
+            "line": 18,
+            "name": "@in_progress"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 11,
+            "value": "#Login information for generic user so all scenarios will use the same starting point"
+          }
+        ],
+        "line": 12,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 150646,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "a user access the bank web app",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 81532,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "logs using the credentials",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "bank_id",
+                  "username",
+                  "password",
+                  "url"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "25967",
+                  "ban5ker",
+                  "training",
+                  "http://www.mykidsbank.org"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "Make a withdraw",
+        "description": "",
+        "id": "manage-simple-transactions-in-a-banking-account;make-a-withdraw;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 183582,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "my checking account has a balance greater than 250 before withdraw",
+            "match": {
+              "arguments": [
+                {
+                  "val": "250",
+                  "offset": 47
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.my_checking_account_has_a_balance_greater_than_before_withdraw(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 211120,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I withdraw 250 from my checking account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "250",
+                  "offset": 11
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 206260,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I should have less 250 as balance",
+            "match": {
+              "arguments": [
+                {
+                  "val": "250",
+                  "offset": 19
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 27,
+            "name": "@TC002"
+          },
+          {
+            "line": 27,
+            "name": "@signed-off"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 11,
+            "value": "#Login information for generic user so all scenarios will use the same starting point"
+          }
+        ],
+        "line": 12,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 169004,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "a user access the bank web app",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101510,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "logs using the credentials",
+            "match": {
+              "location": "AC001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "bank_id",
+                  "username",
+                  "password",
+                  "url"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "25967",
+                  "ban5ker",
+                  "training",
+                  "http://www.mykidsbank.org"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 36,
+        "name": "Make a withdraw",
+        "description": "",
+        "id": "manage-simple-transactions-in-a-banking-account;make-a-withdraw;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 323969,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "my checking account has a balance greater than 1000 before withdraw",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 47
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.my_checking_account_has_a_balance_greater_than_before_withdraw(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 165764,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I withdraw 1000 from my checking account",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 11
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 172243,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I should have less 1000 as balance",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 19
+                }
+              ],
+              "location": "AC001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 27,
+            "name": "@TC002"
+          },
+          {
+            "line": 27,
+            "name": "@signed-off"
+          }
+        ]
+      }
+    ],
+    "name": "Manage simple transactions in a banking account",
+    "description": "       In order to manage my money more efficiently\r\n       As a bank client\r\n       TC_001: I want to make a deposit and withdraw money whenever I need to\r\n       TC_002: I want to make a transfer to another bank account whenever I need to\r\n       TC_003: I want to make a transfer to an international bank account",
+    "id": "manage-simple-transactions-in-a-banking-account",
+    "keyword": "Feature",
+    "uri": "Sample banking acceptance criteria.feature"
+  }
+]
