@@ -13,7 +13,7 @@ Feature: Manage simple transactions in a banking account
     Given a user access the bank web app
     And logs using the credentials
       | bank_id | username | password | url                       |
-      |   25967 | ban5ker   | training | http://www.mykidsbank.org |
+      |   25967 | banker   | training | http://www.mykidsbank.org |
 
   @TC_001 @in_progress
   Scenario: Make a deposit
