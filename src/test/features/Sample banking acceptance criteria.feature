@@ -6,14 +6,14 @@ Feature: Manage simple transactions in a banking account
          As a bank client
          TC_001: I want to make a deposit and withdraw money whenever I need to
          TC_002: I want to make a transfer to another bank account whenever I need to
-         TC_003: I want to make a transfer to an international bank account
+  		   TC_003: I want to make a transfer to an international bank account
 
   #Login information for generic user so all scenarios will use the same starting point
   Background: 
     Given a user access the bank web app
     And logs using the credentials
       | bank_id | username | password | url                       |
-      |   25967 | banker   | training | http://www.mykidsbank.org |
+      | 25967   | banker   | training | http://www.mykidsbank.org |
 
   @TC_001 @in_progress
   Scenario: Make a deposit
@@ -22,7 +22,6 @@ Feature: Manage simple transactions in a banking account
     Then I should have additional 1500 as balance
 
   # Include here the parametrization and data for positive and negative test
-  
   
   @TC002 @signed-off
   Scenario Outline: Make a withdraw
